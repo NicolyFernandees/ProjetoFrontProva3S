@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Prova 3S</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Gerenciador de Empréstimos - Biblioteca Comunitária</h1>
+        
+        <form id="emprestarLivro">
+          <label>Nome do leitor: </label>
+          <input type="text" id="nome" required />
+    
+          <label>Título do livro: </label>
+          <input type="text" id="nomeLivro" required />
+          <select id="tipo" required>
+            <option value="Adulto">Adulto</option>
+            <option value="Adolescente">Adolescente</option>
+            <option value="Infantil">Infantil</option>
+          </select>
+    
+          <label>Data do empréstimo: </label>
+          <input type="date" id="date" value="01-02-2017" />
+          
+          <label>Quantidade de empréstimo: </label>
+          <input type="number" id="quantidade" min="1" required />
+    
+          <button id="btnRegistrar">Registrar Empréstimo</button>
+          <p id="mensagem"></p>
+        </form>
+        <div class="tabela">
+            <table>
+                <thead> <!--cabeçalho da tabela-->
+                    <tr> <!--linhas da tabela-->
+                        <th>Leitor</th>
+                        <th>Livro</th>
+                        <th>Tipo</th>
+                        <th>Empréstimo</th>
+                        <th>Devolução</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="listarLeitores"> <!--corpo da tabela--> </tbody>
+            </table>
+        </div> <!--fechamento tabela-->
+
+    </div> <!--fechamento container-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
